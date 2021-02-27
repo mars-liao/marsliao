@@ -7,7 +7,7 @@ google_analytics: "G-3106ZL9QWK"
 
 # UI configs
 title: "Design by Mars Liao"
-subtitle: "See the world through my eyes!"
+# subtitle: "See the world through my eyes!"
 author: "Mars Liao"
 header:
  title: "Design"
