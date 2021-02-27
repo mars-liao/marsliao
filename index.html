@@ -66,7 +66,7 @@ layout: default
         <!-- Main -->
         <div id="main">
             {% for image in site.static_files %}
-            {% if image.path contains 'home\fulls' %}
+            {% if image.path contains 'home/fulls' %}
             <article class="thumb">
                 <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
                     <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt=""
