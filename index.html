@@ -51,10 +51,10 @@ layout: default
     <header id="header">
         <h1>
             <a href="index.html">
-                <strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}
+                <strong>{{ site.header.title }}</strong> {{ site.header.subtitle }} &nbsp; &nbsp; &nbsp; &copy; All rights reserved
             </a>
         </h1>
-        <p style="font-size:80%;"> &nbsp; &nbsp; &nbsp; &copy; All rights reserved. </p>
+        <!-- <p style="font-size:80%;">  </p> -->
         <nav>
             <ul>
                 <li><a href="#footer" class="icon fa-info-circle">About Me</a></li>
@@ -66,16 +66,14 @@ layout: default
 
         <!-- Main -->
         <div id="main">
-            {% for image in site.static_files %}
-            {% if image.path contains 'fulls' %}
+            {% for image in site.home_fulls_loc %}
             <article class="thumb">
-                <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-                    <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
+                <a href="{{ site.baseurl }}{{ site.home_fulls_loc }}/{{ image.name }}" class="image">
+                    <img src="{{ site.baseurl }}{{ site.home_thumbs_loc }}/{{ image.name }}" alt=""
                         data-name="{{ image.name }}" /></a>
                 <!--<h2></h2>
                 <p></p>-->
             </article>
-            {% endif %}
             {% endfor %}
         </div>
 
