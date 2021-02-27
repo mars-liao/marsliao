@@ -1,8 +1,8 @@
 # Base configs
-baseurl: "https://marsliao.com"
+baseurl: "https://www.marsliao.com"
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
-google_analytics: "UA-46465113-2"
+google_analytics: "G-3106ZL9QWK"
 
 # UI configs
 title: "Design by Mars Liao"
@@ -12,10 +12,9 @@ header:
  title: "Design"
  subtitle: "by Mars Liao"
 footer:
- name: "Hey there, my name is Mars"
+ name: "Hey there, my name is Mars Liao"
  bio: "I am a beginner of fashion design"
  github: ""
-web_design: "AJ"
 social_urls:
   # facebook: "https://www.facebook.com/ramswaroop"
   # twitter: "https://www.twitter.com/ram__patra"
