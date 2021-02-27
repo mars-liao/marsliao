@@ -25,10 +25,10 @@ title: art
                     <a href={{site.baseurl}} title="Home" class="nav-link ">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="collections" title="Collections" class="nav-link nav-active">Collections</a>
+                    <a href="collections" title="Collections" class="nav-link ">Collections</a>
                 </li>
                 <li class="nav-item">
-                    <a href="art" title="Art" class="nav-link ">Art</a>
+                    <a href="art" title="Art" class="nav-link nav-active">Art</a>
                 </li>
                 <li class="nav-item">
                     <a href="contact" title="Contact" class="nav-link ">Contact</a>
@@ -38,4 +38,49 @@ title: art
     </div>
 </nav>
 
-test
+<!-- Wrapper -->
+<div id="wrapper">
+    <header id="header">
+        <h1>
+            <a href="index.html">
+                <strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}
+                <br>
+                <p style="font-size:60%;"> &copy; All rights reserved </p>
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#footer" class="icon fa-info-circle">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+        test
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="panel">
+        <div class="inner split">
+            <div>
+                <section>
+                    <h2>{{ site.footer.name }}</h2>
+                    <p>{{ site.footer.bio }}</p>
+                    <p>{{ site.footer.github }}</p>
+                </section>
+                <section>
+                    <p>Follow me on Instagram: marsliao_official
+                        <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram" style="font-size: 2em;">
+                            <span class="label">Instagram</span>
+                        </a>
+                    </p>
+                </section>
+                <p class="copyright">
+                    All rights reserved &copy; {{ site.author }}
+                    <!--Design: {{ site.web_design }}-->
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
