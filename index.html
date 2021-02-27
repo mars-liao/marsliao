@@ -51,7 +51,8 @@ layout: default
     <header id="header">
         <h1>
             <a href="index.html">
-                <strong>{{ site.header.title }}</strong> {{ site.header.subtitle }} &nbsp; &nbsp; &nbsp; &copy; All rights reserved
+                <strong>{{ site.header.title }}</strong> {{ site.header.subtitle }} &nbsp; &nbsp; &nbsp; &copy; All
+                rights reserved
             </a>
         </h1>
         <!-- <p style="font-size:80%;">  </p> -->
@@ -62,39 +63,37 @@ layout: default
         </nav>
     </header>
 
-    <body class="grey">
-        <!-- Main -->
-        <div id="main">
-            {% for image in site.static_files %}
-            {% if image.path contains 'home/fulls' %}
-            <article class="thumb">
-                <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
-                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt=""
-                        data-name="{{ image.name }}" /></a>
-                <!--<h2></h2>
+    <!-- Main -->
+    <div id="main">
+        {% for image in site.static_files %}
+        {% if image.path contains 'home/fulls' %}
+        <article class="thumb">
+            <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
+                <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt=""
+                    data-name="{{ image.name }}" /></a>
+            <!--<h2></h2>
                 <p></p>-->
-            </article>
-            {% endif %}
-            {% endfor %}
-        </div>
+        </article>
+        {% endif %}
+        {% endfor %}
+    </div>
 
-        <!-- Footer -->
-        <footer id="footer" class="panel">
-            <div class="inner split">
-                <div>
-                    <section>
-                        <h2>{{ site.footer.name }}</h2>
-                        <p>{{ site.footer.bio }}</p>
-                        <p>{{ site.footer.github }}</p>
-                    </section>
-                    <section>
-                        <p>Follow me on Instagram: marsliao_official
-                            <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram"
-                                style="font-size: 2em;">
-                                <span class="label">Instagram</span>
-                            </a>
-                        </p>
-                        <!-- <ul class="icons">
+    <!-- Footer -->
+    <footer id="footer" class="panel">
+        <div class="inner split">
+            <div>
+                <section>
+                    <h2>{{ site.footer.name }}</h2>
+                    <p>{{ site.footer.bio }}</p>
+                    <p>{{ site.footer.github }}</p>
+                </section>
+                <section>
+                    <p>Follow me on Instagram: marsliao_official
+                        <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram" style="font-size: 2em;">
+                            <span class="label">Instagram</span>
+                        </a>
+                    </p>
+                    <!-- <ul class="icons">
                             {% if site.social_urls.facebook %}
                                 <li>
                                     <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
@@ -131,12 +130,11 @@ layout: default
                                 </li>
                             {% endif %}
                         </ul> -->
-                    </section>
-                    <p class="copyright">
-                        All rights reserved &copy; {{ site.author }}
-                    </p>
-                </div>
+                </section>
+                <p class="copyright">
+                    All rights reserved &copy; {{ site.author }}
+                </p>
             </div>
-        </footer>
-    </body>
+        </div>
+    </footer>
 </div>

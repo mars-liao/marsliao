@@ -3,14 +3,14 @@ layout: default
 ---
 
 <meta name="theme-color" content="#1E1E1E">
-<!-- 
+
 <link rel="apple-touch-icon" href="/images/logo.jpg">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 <link media="all" type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link media="all" type="text/css" rel="stylesheet" href="assets/css/all.min.css">
-<!-- <link media="all" type="text/css" rel="stylesheet" href="assets/css/portfolio.css"> -->
+<link media="all" type="text/css" rel="stylesheet" href="assets/css/portfolio.css">
 
 <nav id="navbar" class="navbar fixed-top navbar-inverse bg-inverse navbar-toggleable-sm transparent" role="navigation">
     <div class="container text-center my-auto">
@@ -64,9 +64,8 @@ layout: default
         </nav>
     </header>
 
-    <body class="grey">
-        <!-- Main -->
-        <!-- <div id="main">
+    <!-- Main -->
+    <!-- <div id="main">
             {% for image in site.static_files %}
             {% if image.path contains 'fulls' %}
             <article class="thumb">
@@ -75,34 +74,32 @@ layout: default
                         data-name="{{ image.name }}" /></a>
                 <!--<h2></h2>
                 <p></p>-->
-            </article>
-            {% endif %}
-            {% endfor %}
-        </div> -->
+    </article>
+    {% endif %}
+    {% endfor %}
+</div> -->
 
 
-        <!-- Footer -->
-        <footer id="footer" class="panel">
-            <div class="inner split">
-                <div>
-                    <section>
-                        <h2>{{ site.footer.name }}</h2>
-                        <p>{{ site.footer.bio }}</p>
-                        <p>{{ site.footer.github }}</p>
-                    </section>
-                    <section>
-                        <p>Follow me on Instagram: marsliao_official
-                            <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram"
-                                style="font-size: 2em;">
-                                <span class="label">Instagram</span>
-                            </a>
-                        </p>
-                    </section>
-                    <p class="copyright">
-                        All rights reserved &copy; {{ site.author }}
-                    </p>
-                </div>
-            </div>
-        </footer>
-    </body>
+<!-- Footer -->
+<footer id="footer" class="panel">
+    <div class="inner split">
+        <div>
+            <section>
+                <h2>{{ site.footer.name }}</h2>
+                <p>{{ site.footer.bio }}</p>
+                <p>{{ site.footer.github }}</p>
+            </section>
+            <section>
+                <p>Follow me on Instagram: marsliao_official
+                    <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram" style="font-size: 2em;">
+                        <span class="label">Instagram</span>
+                    </a>
+                </p>
+            </section>
+            <p class="copyright">
+                All rights reserved &copy; {{ site.author }}
+            </p>
+        </div>
+    </div>
+</footer>
 </div>
