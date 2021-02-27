@@ -1,7 +1,6 @@
 # Base configs
 baseurl: "https://www.marsliao.com"
 portfolio_url: "/portfolio"
-image_loc: "/image"
 image_fulls_loc: "/images/fulls"
 image_thumbs_loc: "/images/thumbs"
 google_analytics: "G-3106ZL9QWK"
