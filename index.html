@@ -3,37 +3,37 @@ layout: default
 ---
 
 
-<nav id="header" class="navbar fixed-top navbar-inverse bg-inverse navbar-toggleable-sm  transparent" role="navigation">
-	<div class="container text-center my-auto">
-
-		<div>
-			<a href="{{site.baseurl}}" title="Homepage">
-				<img id="logo" src="{{site.baseurl}}{{site.image_loc}}/marsliao_logo.png" alt="Mars Liao">
-			</a>
-			<button class="navbar-toggler navbar-toggler-right my-auto" type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">
- 				<span class="sr-only">Toggle navigation</span>
-				<span class="navbar-toggler-icon"></span>
- 			</button>
-		</div>
-
-		<div id="menu" class="navbar-right navbar-collapse collapse ">		
-			<ul class="navbar-nav ml-auto transitions">
-								<li class="nav-item">
-					<a href="{{site.baseurl}}" title="Home" class="nav-link nav-active">Home</a>
-				</li>
-								<li class="nav-item">
-					<a href="{{site.baseurl}}{{site.portfolio_url}}" title="Portfolio" class="nav-link ">Portfolio</a>
-				</li>
-							</ul>
-		</div><!--/.nav-collapse -->
-
-	</div>
-</nav>
 
 <!-- Wrapper -->
 <div id="wrapper">
-
-    <!-- Header -->
+    <nav id="header" class="navbar fixed-top navbar-inverse bg-inverse navbar-toggleable-sm  transparent" role="navigation">
+        <div class="container text-center my-auto">
+    
+            <div>
+                <a href="{{site.baseurl}}" title="Homepage">
+                    <img id="logo" src="{{site.baseurl}}{{site.image_loc}}/marsliao_logo.png" alt="Mars Liao">
+                </a>
+                <button class="navbar-toggler navbar-toggler-right my-auto" type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">
+                     <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                 </button>
+            </div>
+    
+            <div id="menu" class="navbar-right navbar-collapse collapse ">		
+                <ul class="navbar-nav ml-auto transitions">
+                                    <li class="nav-item">
+                        <a href="{{site.baseurl}}" title="Home" class="nav-link nav-active">Home</a>
+                    </li>
+                                    <li class="nav-item">
+                        <a href="{{site.baseurl}}{{site.portfolio_url}}" title="Portfolio" class="nav-link ">Portfolio</a>
+                    </li>
+                                </ul>
+            </div><!--/.nav-collapse -->
+    
+        </div>
+    </nav>
+     
+    <!-- Header 
     <header id="header">
         <h1><a href="index.html"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
         <nav>
@@ -41,7 +41,7 @@ layout: default
                 <li><a href="#footer" class="icon fa-info-circle">About</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
 
     <!-- Main -->
     <div id="main">
