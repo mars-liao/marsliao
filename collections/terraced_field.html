@@ -32,10 +32,10 @@ title: art
                     <a href={{site.baseurl}} title="Home" class="nav-link ">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="collections" title="Collections" class="nav-link ">Collections</a>
+                    <a href="collections" title="Collections" class="nav-link nav-active">Collections</a>
                 </li>
                 <li class="nav-item">
-                    <a href="art" title="Art" class="nav-link nav-active">Art</a>
+                    <a href="art" title="Art" class="nav-link">Art</a>
                 </li>
                 <li class="nav-item">
                     <a href="aboutme" title="About Me" class="nav-link ">About Me</a>
@@ -67,10 +67,10 @@ title: art
     <body class="grey">
         <div id="main">
             {% for image in site.static_files %}
-            {% if image.path contains 'art/fulls' %}
+            {% if image.path contains 'collections/terraced_field' %}
             <article class="thumb">
-                <a href="{{ site.baseurl }}/images/art/fulls/{{ image.name }}" class="image">
-                    <img src="{{ site.baseurl }}/images/art/thumbs/{{ image.name }}" alt=""
+                <a href="{{ site.baseurl }}/images/collections/terraced_field/{{ image.name }}" class="image">
+                    <img src="{{ site.baseurl }}/images/collections/terraced_field/{{ image.name }}" alt=""
                         data-name="{{ image.name }}" /></a>
             </article>
             {% endif %}
