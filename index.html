@@ -74,7 +74,7 @@ layout: default
 
         <div id="main">
             <!-- <div id='lightgallery' class='d-flex flex-wrap justify-content-center'> -->
-                <!-- {% for image in site.static_files %}
+            <!-- {% for image in site.static_files %}
                 {% if image.path contains 'home/fulls' %}
                 <article class="thumb">
                     <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
@@ -83,22 +83,21 @@ layout: default
                 </article>
                 {% endif %}
                 {% endfor %} -->
-                {% for image in site.static_files %}
-                {% if image.path contains 'home/fulls' %}
-                <article class="thumb">
-                    <!-- <a class='thumbnails photo transitions' title="{{ image.name }}" -->
-                    <a class='image' title="{{ image.name }}"
-                        href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
-                        <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}">
-                        <!-- <div
+            {% for image in site.static_files %}
+            {% if image.path contains 'home/fulls' %}
+            <article class="thumb">
+                <!-- <a class='thumbnails photo transitions' title="{{ image.name }}" -->
+                <a class='image' title="{{ image.name }}" href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
+                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}">
+                    <!-- <div
                             class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1">
                         </div> -->
-                    </a>
-                </article>
-                {% endif %}
-                {% endfor %}
+                </a>
+            </article>
+            {% endif %}
+            {% endfor %}
 
-                <!-- <a class='thumbnails photo transitions' title='Leopard_Color_002'
+            <!-- <a class='thumbnails photo transitions' title='Leopard_Color_002'
                     href='https://www.toninodemarco-photography.com/img/uploads/185.jpg'>
                     <img src='https://www.toninodemarco-photography.com/img/uploads/185.jpg' alt='Leopard_Color_002'>
                     <div class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1">
@@ -108,14 +107,13 @@ layout: default
         </div>
         <!-- </body> -->
 
-                
+
         <footer class="footer container text-center text-muted black">
             <a href="{{site.baseurl}}/contact" title="Contact" class="mx-2 link-footer text-muted">Contact</a>
             <span class="mx-2 text-muted">All rights reserved &copy; Mars Liao</span>
         </footer>
 <!-- 
-        <!-- Footer -->
-        <!-- <footer id="footer" class="panel">
+        <footer id="footer" class="panel">
             <div class="inner split">
                 <div>
                     <section>
@@ -129,43 +127,6 @@ layout: default
                                 <span class="label">Instagram</span>
                             </a>
                         </p>
-                        <!-- <ul class="icons">
-                            {% if site.social_urls.facebook %}
-                                <li>
-                                    <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
-                                        <span class="label">Facebook</span>
-                                    </a>
-                                </li>
-                            {% endif %}
-                            {% if site.social_urls.twitter %}
-                                <li>
-                                    <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
-                                        <span class="label">Twitter</span>
-                                    </a>
-                                </li>
-                            {% endif %}
-                            {% if site.social_urls.instagram %}
-                                <li>
-                                    <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram">
-                                        <span class="label">Instagram</span>
-                                    </a>
-                                </li>
-                            {% endif %}
-                            {% if site.social_urls.github %}
-                                <li>
-                                    <a href="{{ site.social_urls.github }}" class="icon fa-github">
-                                        <span class="label">GitHub</span>
-                                    </a>
-                                </li>
-                            {% endif %}
-                            {% if site.social_urls.linkedin %}
-                                <li>
-                                    <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
-                                        <span class="label">LinkedIn</span>
-                                    </a>
-                                </li>
-                            {% endif %}
-                        </ul> -->
                     </section>
                     <p class="copyright">
                         All rights reserved &copy; {{ site.author }}
@@ -173,10 +134,9 @@ layout: default
                 </div>
             </div>
         </footer> -->
-    </div> -->
 
 
-    <!-- <script src="{{site.baseurl}}/assets/js/jquery-1.12.4.min.js"></script>
+        <!-- <script src="{{site.baseurl}}/assets/js/jquery-1.12.4.min.js"></script>
     <script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
     <script src="{{site.baseurl}}/assets/js/lightgallery.min.js"></script>
     <script src="{{site.baseurl}}/assets/js/lg-hash.min.js"></script>
