@@ -313,10 +313,7 @@
 
     function imageHasData(img) {
         return !!(img.exifdata);
-    }
-
-
-    function base64ToArrayBuffer(base64, contentType) {
+    }    function base64ToArrayBuffer(base64, contentType) {
         contentType = contentType || base64.match(/^data\:([^\;]+)\;base64,/mi)[1] || ''; // e.g. 'data:image/jpeg;base64,...' => 'image/jpeg'
         base64 = base64.replace(/^data\:([^\;]+)\;base64,/gmi, '');
         var binary = atob(base64);
@@ -440,10 +437,7 @@
         }
 
         var offset = 2,
-            length = file.byteLength;
-
-
-        var isFieldSegmentStart = function(dataView, offset){
+            length = file.byteLength;        var isFieldSegmentStart = function(dataView, offset){
             return (
                 dataView.getUint8(offset) === 0x38 &&
                 dataView.getUint8(offset+1) === 0x42 &&
@@ -474,10 +468,7 @@
 
                 break;
 
-            }
-
-
-            // Not the marker, continue searching
+            }            // Not the marker, continue searching
             offset++;
 
         }
@@ -528,9 +519,6 @@
         }
         return data;
     }
-
-
-
     function readTags(file, tiffStart, dirStart, strings, bigEnd) {
         var entries = file.getUint16(dirStart, !bigEnd),
             tags = {},
@@ -544,10 +532,7 @@
             tags[tag] = readTagValue(file, entryOffset, tiffStart, dirStart, bigEnd);
         }
         return tags;
-    }
-
-
-    function readTagValue(file, entryOffset, tiffStart, dirStart, bigEnd) {
+    }    function readTagValue(file, entryOffset, tiffStart, dirStart, bigEnd) {
         var type = file.getUint16(entryOffset+2, !bigEnd),
             numValues = file.getUint32(entryOffset+4, !bigEnd),
             valueOffset = file.getUint32(entryOffset+8, !bigEnd) + tiffStart,

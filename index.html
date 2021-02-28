@@ -1,63 +1,52 @@
 ---
 layout: default
 ---
-<!-- 
-<link rel="apple-touch-icon" href="/images/logo.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
 
-<link media="all" type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link media="all" type="text/css" rel="stylesheet" href="assets/css/all.min.css">
-<link media="all" type="text/css" rel="stylesheet" href="assets/css/portfolio.css">
-
-<body>
-    <nav id="navbar" class="navbar navbar-default fixed-top navbar-inverse bg-inverse navbar-toggleable-sm transparent"
-        role="navigation">
-        <div class="container text-center my-auto">
-            <div>
-                <a href="{{site.baseurl}}" title="Homepage">
-                    <img id="logo" src="{{site.baseurl}}/images/logo.png" style="width:100px; height:auto;"
-                        alt="Mars Liao">
-                </a>
-                <button class="navbar-toggler navbar-toggler-right my-auto" type="button" data-toggle="collapse"
-                    data-target="#menu" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div id="menu" class="navbar-right navbar-collapse collapse ">
-                <ul class="navbar-nav ml-auto transitions">
-                    <li class="nav-item">
-                        <a href={{site.baseurl}} title="Home" class="nav-link nav-active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{site.baseurl}}/collections" title="Collections" class="nav-link ">Collections</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{site.baseurl}}/art" title="Art" class="nav-link ">Art</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{site.baseurl}}/aboutme" title="About Me" class="nav-link ">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{site.baseurl}}/contact" title="Contact" class="nav-link ">Contact</a>
-                    </li>
-                </ul>
-            </div>
+<nav id="navbar" class="navbar navbar-default fixed-top navbar-inverse bg-inverse navbar-toggleable-sm transparent"
+    role="navigation">
+    <div class="container text-center my-auto">
+        <div>
+            <a href="{{site.baseurl}}" title="Homepage">
+                <img id="logo" src="{{site.baseurl}}/images/logo.png" style="width:100px; height:auto;" alt="Mars Liao">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right my-auto" type="button" data-toggle="collapse"
+                data-target="#menu" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
-    </nav>
-
-    <div id="wrapper">
-        <div id="main">
-            {% for image in site.static_files %}
-            {% if image.path contains 'home/fulls' %}
-            <article class="thumb">
-                <a class='image' href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
-                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="" data-name="{{ image.name }}">
-                </a>
-            </article>
-            {% endif %}
-            {% endfor %}
+        <div id="menu" class="navbar-right navbar-collapse collapse ">
+            <ul class="navbar-nav ml-auto transitions">
+                <li class="nav-item">
+                    <a href={{site.baseurl}} title="Home" class="nav-link nav-active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{site.baseurl}}/collections" title="Collections" class="nav-link ">Collections</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{site.baseurl}}/art" title="Art" class="nav-link ">Art</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{site.baseurl}}/aboutme" title="About Me" class="nav-link ">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{site.baseurl}}/contact" title="Contact" class="nav-link ">Contact</a>
+                </li>
+            </ul>
         </div>
     </div>
-</body>
+</nav>
+
+<div id="wrapper">
+    <div id="main">
+        {% for image in site.static_files %}
+        {% if image.path contains 'home/fulls' %}
+        <article class="thumb">
+            <a class='image' href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
+                <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="" data-name="{{ image.name }}">
+            </a>
+        </article>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
