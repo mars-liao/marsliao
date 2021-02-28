@@ -86,8 +86,8 @@ layout: default
                 {% for image in site.static_files %}
                 {% if image.path contains 'home/fulls' %}
                 <article class="thumb">
-                    <a class='thumbnails photo transitions' title="{{ image.name }}"
                     <!-- <a class='image' title="{{ image.name }}" -->
+                    <a class='thumbnails photo transitions' title="{{ image.name }}"
                         href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
                         <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}">
                         <!-- <div
