@@ -3,7 +3,6 @@ layout: default
 ---
 
 <!--  <meta name="theme-color" content="#1E1E1E"> -->
-
 <link rel="apple-touch-icon" href="/images/logo.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -11,6 +10,31 @@ layout: default
 <link media="all" type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link media="all" type="text/css" rel="stylesheet" href="assets/css/all.min.css">
 <link media="all" type="text/css" rel="stylesheet" href="assets/css/portfolio.css">
+
+<script type="text/javascript">
+    document.oncontextmenu = function (e) {
+        e = e || window.event;
+        if (/^(img|div)$/i.test((e.target || e.srcElement).nodeName)) e.preventDefault();
+    };
+</script>
+
+<script src="{{site.baseurl}}/assets/js/jquery-1.12.4.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/lightgallery.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/lg-hash.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/lg-autoplay.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#lightgallery").lightGallery({
+            download: false,
+            showTitle: false,
+            showCaption: false,
+            overlayOpacity: 0,
+            navigateEndless: false,
+        });
+    });
+</script>
+
 
 <nav id="navbar" class="navbar navbar-default fixed-top navbar-inverse bg-inverse navbar-toggleable-sm transparent"
     role="navigation">
@@ -64,18 +88,38 @@ layout: default
 
         <!-- <body class="grey"> -->
 
-        <!-- <div id="main"> -->
-        <div id="thumbnails" class="thumbnails">
+        <div id="main">
+            <div id='lightgallery' class='d-flex flex-wrap justify-content-center'>
+                <!-- {% for image in site.static_files %}
+                {% if image.path contains 'home/fulls' %}
+                <article class="thumb">
+                    <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
+                        <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}"
+                            data-name="{{ image.name }}" /></a>
+                </article>
+                {% endif %}
+                {% endfor %} -->
+                {% for image in site.static_files %}
+                {% if image.path contains 'home/fulls' %}
+                <article class="thumb">
+                    <a class='thumbnails photo transitions' title="{{ image.name }}"
+                        href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
+                        <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}"
+                            data-name="{{ image.name }}" />
+                        <div class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1">
+                        </div>
+                    </a>
+                </article>
+                {% endif %}
+                {% endfor %}
 
-            {% for image in site.static_files %}
-            {% if image.path contains 'home/fulls' %}
-            <article class="thumb">
-                <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
-                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt=""
-                        data-name="{{ image.name }}" /></a>
-            </article>
-            {% endif %}
-            {% endfor %}
+                <!-- <a class='thumbnails photo transitions' title='Leopard_Color_002'
+                    href='https://www.toninodemarco-photography.com/img/uploads/185.jpg'>
+                    <img src='https://www.toninodemarco-photography.com/img/uploads/185.jpg' alt='Leopard_Color_002'>
+                    <div class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1">
+                    </div>
+                </a> -->
+            </div>
         </div>
         <!-- </body> -->
 
