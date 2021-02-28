@@ -18,79 +18,63 @@ layout: default
     };
 </script>
 
-
-<script src="{{site.baseurl}}/assets/js/jquery-1.12.4.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/lightgallery.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/lg-hash.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/lg-autoplay.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#lightgallery").lightGallery({
-            download: false,
-            showTitle: false,
-            showCaption: false,
-            overlayOpacity: 0,
-            navigateEndless: false,
-        });
-    });
-</script>
-
-<nav id="navbar" class="navbar navbar-default fixed-top navbar-inverse bg-inverse navbar-toggleable-sm transparent"
-    role="navigation">
-    <div class="container text-center my-auto">
-        <div>
-            <a href="{{site.baseurl}}" title="Homepage">
-                <img id="logo" src="{{site.baseurl}}/images/logo.png" style="width:100px; height:auto;" alt="Mars Liao">
-            </a>
-            <button class="navbar-toggler navbar-toggler-right my-auto" type="button" data-toggle="collapse"
-                data-target="#menu" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<body>
+    <nav id="navbar" class="navbar navbar-default fixed-top navbar-inverse bg-inverse navbar-toggleable-sm transparent"
+        role="navigation">
+        <div class="container text-center my-auto">
+            <div>
+                <a href="{{site.baseurl}}" title="Homepage">
+                    <img id="logo" src="{{site.baseurl}}/images/logo.png" style="width:100px; height:auto;"
+                        alt="Mars Liao">
+                </a>
+                <button class="navbar-toggler navbar-toggler-right my-auto" type="button" data-toggle="collapse"
+                    data-target="#menu" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div id="menu" class="navbar-right navbar-collapse collapse ">
+                <ul class="navbar-nav ml-auto transitions">
+                    <li class="nav-item">
+                        <a href={{site.baseurl}} title="Home" class="nav-link nav-active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{site.baseurl}}/collections" title="Collections" class="nav-link ">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{site.baseurl}}/art" title="Art" class="nav-link ">Art</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{site.baseurl}}/aboutme" title="About Me" class="nav-link ">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{site.baseurl}}/contact" title="Contact" class="nav-link ">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div id="menu" class="navbar-right navbar-collapse collapse ">
-            <ul class="navbar-nav ml-auto transitions">
-                <li class="nav-item">
-                    <a href={{site.baseurl}} title="Home" class="nav-link nav-active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{site.baseurl}}/collections" title="Collections" class="nav-link ">Collections</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{site.baseurl}}/art" title="Art" class="nav-link ">Art</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{site.baseurl}}/aboutme" title="About Me" class="nav-link ">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{site.baseurl}}/contact" title="Contact" class="nav-link ">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
 
-<div id="wrapper">
-    <header id="header">
-        <h1>
-            <a href="{{site.baseurl}}">
-                <strong>{{ site.header.title }}</strong> {{ site.header.subtitle }} &nbsp; &nbsp; &nbsp; &copy; All
-                rights reserved
-            </a>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="#footer" class="icon fa-info-circle">About Me</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="wrapper">
+        <header id="header">
+            <h1>
+                <a href="{{site.baseurl}}">
+                    <strong>{{ site.header.title }}</strong> {{ site.header.subtitle }} &nbsp; &nbsp; &nbsp; &copy; All
+                    rights reserved
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#footer" class="icon fa-info-circle">About Me</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- <body class="grey"> -->
+        <!-- <body class="grey"> -->
 
-    <div id="main">
-        <div id='lightgallery' class='d-flex flex-wrap justify-content-center'>
-            <!-- {% for image in site.static_files %}
+        <div id="main">
+            <div id='lightgallery' class='d-flex flex-wrap justify-content-center'>
+                <!-- {% for image in site.static_files %}
                 {% if image.path contains 'home/fulls' %}
                 <article class="thumb">
                     <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
@@ -99,41 +83,44 @@ layout: default
                 </article>
                 {% endif %}
                 {% endfor %} -->
-            {% for image in site.static_files %}
-            {% if image.path contains 'home/fulls' %}
-            <a class='thumbnails photo transitions' title="{{ image.name }}"
-                href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
-                <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}">
-                <div class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1"></div>
-            </a>
-            {% endif %}
-            {% endfor %}
+                {% for image in site.static_files %}
+                {% if image.path contains 'home/fulls' %}
+                <a class='thumbnails photo transitions' title="{{ image.name }}"
+                    href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
+                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}">
+                    <div
+                        class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1">
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
 
-            <!-- <a class='thumbnails photo transitions' title='Leopard_Color_002'
+                <!-- <a class='thumbnails photo transitions' title='Leopard_Color_002'
                     href='https://www.toninodemarco-photography.com/img/uploads/185.jpg'>
                     <img src='https://www.toninodemarco-photography.com/img/uploads/185.jpg' alt='Leopard_Color_002'>
                     <div class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1">
                     </div>
                 </a> -->
+            </div>
         </div>
-    </div>
-    <!-- </body> -->
+        <!-- </body> -->
 
-    <!-- Footer -->
-    <footer id="footer" class="panel">
-        <div class="inner split">
-            <div>
-                <section>
-                    <h5>{{ site.footer.name }}</h5>
-                    <p>{{ site.footer.bio }}</p>
-                </section>
-                <section>
-                    <p>Follow me on Instagram: <a href="{{ site.social_urls.instagram }}">marsliao_official</a>
-                        <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram" style="font-size: 2em;">
-                            <span class="label">Instagram</span>
-                        </a>
-                    </p>
-                    <!-- <ul class="icons">
+        <!-- Footer -->
+        <footer id="footer" class="panel">
+            <div class="inner split">
+                <div>
+                    <section>
+                        <h5>{{ site.footer.name }}</h5>
+                        <p>{{ site.footer.bio }}</p>
+                    </section>
+                    <section>
+                        <p>Follow me on Instagram: <a href="{{ site.social_urls.instagram }}">marsliao_official</a>
+                            <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram"
+                                style="font-size: 2em;">
+                                <span class="label">Instagram</span>
+                            </a>
+                        </p>
+                        <!-- <ul class="icons">
                             {% if site.social_urls.facebook %}
                                 <li>
                                     <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
@@ -170,12 +157,30 @@ layout: default
                                 </li>
                             {% endif %}
                         </ul> -->
-                </section>
-                <p class="copyright">
-                    All rights reserved &copy; {{ site.author }}
-                </p>
+                    </section>
+                    <p class="copyright">
+                        All rights reserved &copy; {{ site.author }}
+                    </p>
+                </div>
             </div>
-        </div>
-    </footer>
-</div>
+        </footer>
+    </div>
 
+
+    <script src="{{site.baseurl}}/assets/js/jquery-1.12.4.min.js"></script>
+    <script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
+    <script src="{{site.baseurl}}/assets/js/lightgallery.min.js"></script>
+    <script src="{{site.baseurl}}/assets/js/lg-hash.min.js"></script>
+    <script src="{{site.baseurl}}/assets/js/lg-autoplay.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#lightgallery").lightGallery({
+                download: false,
+                showTitle: false,
+                showCaption: false,
+                overlayOpacity: 0,
+                navigateEndless: false,
+            });
+        });
+    </script>
+</body>
