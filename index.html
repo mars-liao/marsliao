@@ -62,14 +62,15 @@ layout: default
             </ul>
         </nav>
     </header>
+    <body class="grey">
 
     <!-- Main -->
     <div id="main">
         {% for image in site.static_files %}
         {% if image.path contains 'home/fulls' %}
         <article class="thumb">
-            <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" alt="" data-name="{{ image.name }}" /></a>
+            <a href="{{ site.baseurl }}/images/home/{{ image.name }}" class="image">
+                <img src="{{ site.baseurl }}/images/home/{{ image.name }}" alt="" data-name="{{ image.name }}" /></a>
         </article>
         {% endif %}
         {% endfor %}
@@ -134,4 +135,5 @@ layout: default
             </div>
         </div>
     </footer>
+    </body>
 </div>
