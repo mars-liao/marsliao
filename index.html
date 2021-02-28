@@ -19,6 +19,23 @@ layout: default
 </script>
 
 
+<script src="{{site.baseurl}}/assets/js/jquery-1.12.4.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/lightgallery.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/lg-hash.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/lg-autoplay.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#lightgallery").lightGallery({
+            download: false,
+            showTitle: false,
+            showCaption: false,
+            overlayOpacity: 0,
+            navigateEndless: false,
+        });
+    });
+</script>
+
 <nav id="navbar" class="navbar navbar-default fixed-top navbar-inverse bg-inverse navbar-toggleable-sm transparent"
     role="navigation">
     <div class="container text-center my-auto">
@@ -87,8 +104,7 @@ layout: default
             <a class='thumbnails photo transitions' title="{{ image.name }}"
                 href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
                 <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}">
-                <div class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1">
-                </div>
+                <div class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1"></div>
             </a>
             {% endif %}
             {% endfor %}
@@ -163,20 +179,3 @@ layout: default
     </footer>
 </div>
 
-
-<script src="{{site.baseurl}}/assets/js/jquery-1.12.4.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/lightgallery.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/lg-hash.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/lg-autoplay.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#lightgallery").lightGallery({
-            download: false,
-            showTitle: false,
-            showCaption: false,
-            overlayOpacity: 0,
-            navigateEndless: false,
-        });
-    });
-</script>
