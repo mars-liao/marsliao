@@ -63,7 +63,7 @@ title: collections
             </ul>
         </nav>
     </header>
-
+    <!-- 
     <!-- Main -->
     <!-- <div id="main">
             {% for image in site.static_files %}
@@ -74,32 +74,30 @@ title: collections
                         data-name="{{ image.name }}" /></a>
                 <!--<h2></h2>
                 <p></p>-->
-    </article>
-    {% endif %}
-    {% endfor %}
-</div> -->
+    <!-- </article>
+        {% endif %}
+    {% endfor %}  -->
 
-
-<!-- Footer -->
-<footer id="footer" class="panel">
-    <div class="inner split">
-        <div>
-            <section>
-                <h2>{{ site.footer.name }}</h2>
-                <p>{{ site.footer.bio }}</p>
-                <p>{{ site.footer.github }}</p>
-            </section>
-            <section>
-                <p>Follow me on Instagram: marsliao_official
-                    <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram" style="font-size: 2em;">
-                        <span class="label">Instagram</span>
-                    </a>
+    <!-- Footer -->
+    <footer id="footer" class="panel">
+        <div class="inner split">
+            <div>
+                <section>
+                    <h2>{{ site.footer.name }}</h2>
+                    <p>{{ site.footer.bio }}</p>
+                    <p>{{ site.footer.github }}</p>
+                </section>
+                <section>
+                    <p>Follow me on Instagram: marsliao_official
+                        <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram" style="font-size: 2em;">
+                            <span class="label">Instagram</span>
+                        </a>
+                    </p>
+                </section>
+                <p class="copyright">
+                    All rights reserved &copy; {{ site.author }}
                 </p>
-            </section>
-            <p class="copyright">
-                All rights reserved &copy; {{ site.author }}
-            </p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </div>
