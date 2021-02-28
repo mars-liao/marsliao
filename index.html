@@ -2,13 +2,6 @@
 layout: default
 ---
 
-<script type="text/javascript">
-    document.oncontextmenu = function (e) {
-        e = e || window.event;
-        if (/^(img|div)$/i.test((e.target || e.srcElement).nodeName)) e.preventDefault();
-    };
-</script>
-
 <body>
     <nav id="navbar" class="navbar navbar-default fixed-top navbar-inverse bg-inverse navbar-toggleable-sm transparent"
         role="navigation">
@@ -58,9 +51,5 @@ layout: default
             {% endif %}
             {% endfor %}
         </div>
-        <footer class="footer container text-center text-muted black">
-            <a href="{{site.baseurl}}/contact" title="Contact" class="mx-2 link-footer text-muted">Contact</a>
-            <span class="mx-2 text-muted">All rights reserved &copy; Mars Liao</span>
-        </footer>
     </div>
 </body>
