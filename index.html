@@ -69,8 +69,8 @@ layout: default
         {% for image in site.static_files %}
         {% if image.path contains 'home/fulls' %}
         <article class="thumb">
-            <a href="{{ site.baseurl }}/images/home/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}/images/home/{{ image.name }}" alt="" data-name="{{ image.name }}" /></a>
+            <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
+                <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="" data-name="{{ image.name }}" /></a>
         </article>
         {% endif %}
         {% endfor %}
