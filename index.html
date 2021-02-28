@@ -2,6 +2,20 @@
 layout: default
 ---
 
+<link rel="apple-touch-icon" href="/images/logo.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link media="all" type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="assets/css/all.min.css">
+<link media="all" type="text/css" rel="stylesheet" href="assets/css/portfolio.css">
+
+<script type="text/javascript">
+    document.oncontextmenu = function (e) {
+        e = e || window.event;
+        if (/^(img|div)$/i.test((e.target || e.srcElement).nodeName)) e.preventDefault();
+    };
+</script>
 
 <body>
     <nav id="navbar" class="navbar navbar-default fixed-top navbar-inverse bg-inverse navbar-toggleable-sm transparent"
@@ -52,5 +66,9 @@ layout: default
             {% endif %}
             {% endfor %}
         </div>
+        <footer class="footer container text-center text-muted black">
+            <a href="{{site.baseurl}}/contact" title="Contact" class="mx-2 link-footer text-muted">Contact</a>
+            <span class="mx-2 text-muted">All rights reserved &copy; Mars Liao</span>
+        </footer>
     </div>
 </body>
