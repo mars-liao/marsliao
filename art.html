@@ -48,7 +48,6 @@ title: art
     </div>
 </nav>
 
-<!-- Wrapper -->
 <div id="wrapper">
     <header id="header">
         <h1>
@@ -66,33 +65,39 @@ title: art
     </header>
 
     <body class="grey">
-        <!-- Main -->
         <div id="main">
-            <p> test</p>
+            {% for image in site.static_files %}
+            {% if image.path contains 'art/fulls' %}
+            <article class="thumb">
+                <a href="{{ site.baseurl }}/images/art/fulls/{{ image.name }}" class="image">
+                    <img src="{{ site.baseurl }}/images/art/thumbs/{{ image.name }}" alt=""
+                        data-name="{{ image.name }}" /></a>
+            </article>
+            {% endif %}
+            {% endfor %}
         </div>
-        <!-- Footer -->
-        <footer id="footer" class="panel">
-            <div class="inner split">
-                <div>
-                    <section>
-                        <h2>{{ site.footer.name }}</h2>
-                        <p>{{ site.footer.bio }}</p>
-                        <p>{{ site.footer.github }}</p>
-                    </section>
-                    <section>
-                        <p>Follow me on Instagram: marsliao_official
-                            <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram"
-                                style="font-size: 2em;">
-                                <span class="label">Instagram</span>
-                            </a>
-                        </p>
-                    </section>
-                    <p class="copyright">
-                        All rights reserved &copy; {{ site.author }}
-                        <!--Design: {{ site.web_design }}-->
-                    </p>
-                </div>
-            </div>
-        </footer>
     </body>
+
+    <footer id="footer" class="panel">
+        <div class="inner split">
+            <div>
+                <section>
+                    <h2>{{ site.footer.name }}</h2>
+                    <p>{{ site.footer.bio }}</p>
+                    <p>{{ site.footer.github }}</p>
+                </section>
+                <section>
+                    <p>Follow me on Instagram: marsliao_official
+                        <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram" style="font-size: 2em;">
+                            <span class="label">Instagram</span>
+                        </a>
+                    </p>
+                </section>
+                <p class="copyright">
+                    All rights reserved &copy; {{ site.author }}
+                    <!--Design: {{ site.web_design }}-->
+                </p>
+            </div>
+        </div>
+    </footer>
 </div>

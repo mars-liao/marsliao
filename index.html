@@ -46,7 +46,6 @@ layout: default
     </div>
 </nav>
 
-<!-- Wrapper -->
 <div id="wrapper">
     <header id="header">
         <h1>
@@ -55,27 +54,26 @@ layout: default
                 rights reserved
             </a>
         </h1>
-        <!-- <p style="font-size:80%;">  </p> -->
         <nav>
             <ul>
                 <li><a href="#footer" class="icon fa-info-circle">About Me</a></li>
             </ul>
         </nav>
     </header>
-<body class="grey">
 
-    <!-- Main -->
-    <div id="main">
-        {% for image in site.static_files %}
-        {% if image.path contains 'home/fulls' %}
-        <article class="thumb">
-            <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="" data-name="{{ image.name }}" /></a>
-        </article>
-        {% endif %}
-        {% endfor %}
-    </div>
-</body>
+    <body class="grey">
+        <div id="main">
+            {% for image in site.static_files %}
+            {% if image.path contains 'home/fulls' %}
+            <article class="thumb">
+                <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
+                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt=""
+                        data-name="{{ image.name }}" /></a>
+            </article>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </body>
     <!-- Footer -->
     <footer id="footer" class="panel">
         <div class="inner split">
