@@ -73,7 +73,7 @@ layout: default
         <!-- <body class="grey"> -->
 
         <div id="main">
-            <!-- <div id='lightgallery' class='d-flex flex-wrap justify-content-center'> -->
+            <div id='lightgallery' class='d-flex flex-wrap justify-content-center'>
                 <!-- {% for image in site.static_files %}
                 {% if image.path contains 'home/fulls' %}
                 <article class="thumb">
@@ -86,8 +86,8 @@ layout: default
                 {% for image in site.static_files %}
                 {% if image.path contains 'home/fulls' %}
                 <article class="thumb">
-                    <!-- <a class='image' title="{{ image.name }}" -->
-                    <a class='thumbnails photo transitions' title="{{ image.name }}"
+                    <!-- <a class='thumbnails photo transitions' title="{{ image.name }}" -->
+                    <a class='image' title="{{ image.name }}"
                         href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
                         <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}">
                         <!-- <div
@@ -104,7 +104,7 @@ layout: default
                     <div class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1">
                     </div>
                 </a> -->
-            <!-- </div> -->
+            </div>
         </div>
         <!-- </body> -->
 
