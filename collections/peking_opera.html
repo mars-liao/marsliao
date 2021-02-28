@@ -1,7 +1,7 @@
 ---
 layout: default
 
-title: collections
+title: art
 ---
 
 <meta name="theme-color" content="#1E1E1E">
@@ -32,10 +32,10 @@ title: collections
                     <a href={{site.baseurl}} title="Home" class="nav-link ">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="collections" title="Collections" class="nav-link nav-active ">Collections</a>
+                    <a href="collections" title="Collections" class="nav-link ">Collections</a>
                 </li>
                 <li class="nav-item">
-                    <a href="art" title="Art" class="nav-link ">Art</a>
+                    <a href="art" title="Art" class="nav-link nav-active">Art</a>
                 </li>
                 <li class="nav-item">
                     <a href="aboutme" title="About Me" class="nav-link ">About Me</a>
@@ -63,43 +63,21 @@ title: collections
             </ul>
         </nav>
     </header>
+
     <body class="grey">
-        <main>
-            <h1 class="text-center mb-4">My Portfolio</h1>
-            <div class='d-flex flex-wrap justify-content-center'>
-                <a class='folder thumbnails text-white text-center transitions'
-                    href='{{site.baseurl}}/collections/ink_bamboo' title='Open Ink Bamboo'>
-                    <img src='{{site.baseurl}}/images/collections/ink_bamboo/6.jpg' alt='Ink Bamboo'>
-                    <h2 class='caption'>Ink Bamboo</h2>
-                </a>
-                <a class='folder thumbnails text-white text-center transitions'
-                    href='{{site.baseurl}}/collections/peking_opera' title='Open Peking Opera'>
-
-                    <img src='{{site.baseurl}}/images/collections/peking_opera/peking_opera_03.jpg' alt='Peking Opera'>
-                    <h2 class='caption'>Peking Opera</h2>
-                </a>
-                <a class='folder thumbnails text-white text-center transitions'
-                    href='{{site.baseurl}}/collections/temple_of_heaven' title='Open Temple of Heaven'>
-
-                    <img src='{{site.baseurl}}/images/collections/temple_of_heaven/temple_03.jpg' alt='Temple of Heaven'>
-                    <h2 class='caption'>Temple of Heaven </h2>
-                </a>
-                <a class='folder thumbnails text-white text-center transitions'
-                    href='{{site.baseurl}}/collections/terraced_field' title='Open Terraced Field'>
-
-                    <img src='{{site.baseurl}}/images/collections/terraced_field/terraced_field_04.jpg' alt='Terraced Field'>
-                    <h2 class='caption'>Terraced Field</h2>
-                </a>
-                <a class='folder thumbnails text-white text-center transitions'
-                    href='{{site.baseurl}}/collections/wheelchair_basketball_uniform' title='Open Wheelchair Basketball Uniform'>
-
-                    <img src='{{site.baseurl}}/images/collections/wheelchair_basketball_uniform/presentation_sheet/1.png' alt='Wheelchair Basketball Uniform'>
-                    <h2 class='caption'>Wheelchair Basketball Uniform</h2>
-                </a>
-            </div>
-        </main>
+        <div id="main">
+            {% for image in site.static_files %}
+            {% if image.path contains 'art/fulls' %}
+            <article class="thumb">
+                <a href="{{ site.baseurl }}/images/art/fulls/{{ image.name }}" class="image">
+                    <img src="{{ site.baseurl }}/images/art/thumbs/{{ image.name }}" alt=""
+                        data-name="{{ image.name }}" /></a>
+            </article>
+            {% endif %}
+            {% endfor %}
+        </div>
     </body>
-    <!-- Footer -->
+
     <footer id="footer" class="panel">
         <div class="inner split">
             <div>
@@ -117,6 +95,7 @@ title: collections
                 </section>
                 <p class="copyright">
                     All rights reserved &copy; {{ site.author }}
+                    <!--Design: {{ site.web_design }}-->
                 </p>
             </div>
         </div>
