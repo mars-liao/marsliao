@@ -33,7 +33,7 @@ layout: default
                     <a href="{{site.baseurl}}/collections" title="Collections" class="nav-link nav-active">Collections</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{site.baseurl}}/art" title="Art" class="nav-link">Art</a>
+                    <a href="{{site.baseurl}}/art" title="Art" class="nav-link ">Art</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{site.baseurl}}/aboutme" title="About Me" class="nav-link ">About Me</a>
@@ -63,30 +63,16 @@ layout: default
     </header>
 
     <body class="grey">
-        <div class='d-flex flex-wrap justify-content-center'>
-            <a class='folder thumbnails text-white text-center transitions'
-                href='{{site.baseurl}}/collections/wbu/design_rationale' title='Open Design Rationale'>
-                <img src='{{site.baseurl}}/images/collections/wbu/design_rationale/1.png' alt='Design Rationale'>
-                <h2 class='caption'>Design Rationale</h2>
-            </a>
-            <a class='folder thumbnails text-white text-center transitions'
-                href='{{site.baseurl}}/collections/wbu/presentation_sheet' title='Open Presentation Sheet'>
-
-                <img src='{{site.baseurl}}/images/collections/wbu/presentation_sheet/1.png' alt='Presentation Sheet'>
-                <h2 class='caption'>Presentation Sheet</h2>
-            </a>
-            <a class='folder thumbnails text-white text-center transitions'
-                href='{{site.baseurl}}/collections/wbu/sketchbook' title='Open Sketchbook'>
-
-                <img src='{{site.baseurl}}/images/collections/wbu/Sketchbook/thumbs/Sketchbook (27).png' alt='Sketchbook'>
-                <h2 class='caption'>Sketchbook </h2>
-            </a>
-            <a class='folder thumbnails text-white text-center transitions'
-                href='{{site.baseurl}}/collections/wbu/technical_folder' title='Open Technical Folder'>
-
-                <img src='{{site.baseurl}}/images/collections/wbu/technical_folder/technical folder (9).png' alt='Technical Folder'>
-                <h2 class='caption'>Technical Folder</h2>
-            </a>
+        <div id="main">
+            {% for image in site.static_files %}
+            {% if image.path contains 'collections/wbu/design_rationale' %}
+            <article class="thumb">
+                <a href="{{ site.baseurl }}/images/collections/wbu/design_rationale/{{ image.name }}" class="image">
+                    <img src="{{ site.baseurl }}/images/collections/wbu/design_rationale/{{ image.name }}" alt=""
+                        data-name="{{ image.name }}" /></a>
+            </article>
+            {% endif %}
+            {% endfor %}
         </div>
     </body>
 
