@@ -64,7 +64,9 @@ layout: default
 
         <!-- <body class="grey"> -->
 
-        <div id="main">
+        <!-- <div id="main"> -->
+        <div id="thumbnails" class="thumbnails">
+
             {% for image in site.static_files %}
             {% if image.path contains 'home/fulls' %}
             <article class="thumb">
