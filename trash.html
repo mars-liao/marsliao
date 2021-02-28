@@ -1,0 +1,73 @@
+<!--  <meta name="theme-color" content="#1E1E1E"> -->
+
+<!-- <body class="grey"> -->
+
+<div id="main">
+    <!-- <div id='lightgallery' class='d-flex flex-wrap justify-content-center'> -->
+    <!-- {% for image in site.static_files %}
+        {% if image.path contains 'home/fulls' %}
+        <article class="thumb">
+            <a href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" class="image">
+                <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}"
+                    data-name="{{ image.name }}" /></a>
+        </article>
+        {% endif %}
+        {% endfor %} -->
+    {% for image in site.static_files %}
+    {% if image.path contains 'home/fulls' %}
+    <article class="thumb">
+        <!-- <a class='thumbnails photo transitions' title="{{ image.name }}" -->
+        <a class='image' title="{{ image.name }}" href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
+            <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="{{ image.name }}">
+            <!-- <div
+                    class="mask d-flex align-items-center justify-content-center text-white font-weight-bold display-1">
+                </div> -->
+        </a>
+    </article>
+    {% endif %}
+    {% endfor %}
+</div>
+<!-- </body> -->
+
+
+
+<!-- 
+        <footer id="footer" class="panel">
+            <div class="inner split">
+                <div>
+                    <section>
+                        <h5>{{ site.footer.name }}</h5>
+                        <p>{{ site.footer.bio }}</p>
+                    </section>
+                    <section>
+                        <p>Follow me on Instagram: <a href="{{ site.social_urls.instagram }}">marsliao_official</a>
+                            <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram"
+                                style="font-size: 2em;">
+                                <span class="label">Instagram</span>
+                            </a>
+                        </p>
+                    </section>
+                    <p class="copyright">
+                        All rights reserved &copy; {{ site.author }}
+                    </p>
+                </div>
+            </div>
+        </footer> -->
+
+
+<!-- <script src="{{site.baseurl}}/assets/js/jquery-1.12.4.min.js"></script>
+    <script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
+    <script src="{{site.baseurl}}/assets/js/lightgallery.min.js"></script>
+    <script src="{{site.baseurl}}/assets/js/lg-hash.min.js"></script>
+    <script src="{{site.baseurl}}/assets/js/lg-autoplay.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#lightgallery").lightGallery({
+                download: false,
+                showTitle: false,
+                showCaption: false,
+                overlayOpacity: 0,
+                navigateEndless: false,
+            });
+        });
+    </script> -->
