@@ -2,9 +2,6 @@
 layout: default
 ---
 
-<!-- <meta name="theme-color" content="#1E1E1E"> -->
-
-
 <link rel="apple-touch-icon" href="{{site.baseurl}}/images/logo.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -31,7 +28,8 @@ layout: default
                     <a href={{site.baseurl}} title="Home" class="nav-link ">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{site.baseurl}}/collections" title="Collections" class="nav-link nav-active">Collections</a>
+                    <a href="{{site.baseurl}}/collections" title="Collections"
+                        class="nav-link nav-active">Collections</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{site.baseurl}}/art" title="Art" class="nav-link ">Art</a>
@@ -48,56 +46,19 @@ layout: default
 </nav>
 
 <div id="wrapper">
-    <header id="header">
-        <h1>
-            <a href="{{site.baseurl}}">
-                <strong>{{ site.header.title }}</strong> {{ site.header.subtitle }} &nbsp; &nbsp; &nbsp; &copy; All
-                rights reserved
-            </a>
-        </h1>
-        <nav>
-            <ul>
-                <li><a href="#footer" class="icon fa-info-circle">About Me</a></li>
-            </ul>
-        </nav>
-    </header>
-
-        <!-- <body class="grey"> -->
-
-        <div id="main">
-            {% for image in site.static_files %}
-            {% if image.path contains 'collections/wbu/design_rationale' %}
-            <article class="thumb">
-                <a href="{{ site.baseurl }}/images/collections/wbu/design_rationale/{{ image.name }}" class="image">
-                    <img src="{{ site.baseurl }}/images/collections/wbu/design_rationale/{{ image.name }}" alt=""
-                        data-name="{{ image.name }}" /></a>
-            </article>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <!-- </body> -->
-
-
-    <footer id="footer" class="panel">
-        <div class="inner split">
-            <div>
-                <section>
-                    <h2>{{ site.footer.name }}</h2>
-                    <p>{{ site.footer.bio }}</p>
-                    <p>{{ site.footer.github }}</p>
-                </section>
-                <section>
-                    <p>Follow me on Instagram:  <a href="{{ site.social_urls.instagram }}">marsliao_official</a>
-                        <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram" style="font-size: 2em;">
-                            <span class="label">Instagram</span>
-                        </a>
-                    </p>
-                </section>
-                <p class="copyright">
-                    All rights reserved &copy; {{ site.author }}
-                    <!--Design: {{ site.web_design }}-->
-                </p>
-            </div>
-        </div>
+    <div id="main">
+        {% for image in site.static_files %}
+        {% if image.path contains 'collections/wbu/design_rationale' %}
+        <article class="thumb">
+            <a href="{{ site.baseurl }}/images/collections/wbu/design_rationale/{{ image.name }}" class="image">
+                <img src="{{ site.baseurl }}/images/collections/wbu/design_rationale/{{ image.name }}" alt=""
+                    data-name="{{ image.name }}" /></a>
+        </article>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <footer class="footer container text-center text-muted black">
+        <a href="{{site.baseurl}}/contact" title="Contact" class="mx-2 link-footer text-muted">Contact</a>
+        <span class="mx-2 text-muted">All rights reserved &copy; Mars Liao</span>
     </footer>
 </div>
