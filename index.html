@@ -40,11 +40,11 @@ layout: default
     </nav>
 
     <div id="wrapper">
-        <div id="main" style="margin:15%;">
+        <div id="main" style="margin:10%;">
             {% for image in site.static_files %}
             {% if image.path contains 'home/fulls' %}
             <article class="thumb" >
-                <a class='image' style="padding:5px; height:100%; width:auto;" href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
+                <a class='image' style="padding:1%;" href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
                     <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="" data-name="{{ image.name }}">
                 </a>
             </article>
