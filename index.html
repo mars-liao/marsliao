@@ -45,10 +45,8 @@ layout: default
             {% if image.path contains 'home/fulls' %}
             <article class="thumb">
                 <a class='image' href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
-                    <a>
-                        <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt=""
-                            data-name="{{ image.name }}">
-                    </a>
+                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt=""
+                        data-name="{{ image.name }}">
                 </a>
             </article>
             {% endif %}
