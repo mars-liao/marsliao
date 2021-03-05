@@ -43,15 +43,22 @@ layout: default
         <div id="main" style="margin-right:10%; margin-left:10%;">
             {% for image in site.static_files %}
             {% if image.path contains 'home/fulls' %}
-            <div class="thumbnails" id="thumbnails">
-                <article class="thumb" >
-                    <a class='image' href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
-                        <a>
-                            <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="" data-name="{{ image.name }}">
-                        </a>
-                    </a>
-                </article>
-            </div>
+            <article class="thumb" >
+                <a class='image' href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
+                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="" data-name="{{ image.name }}">
+                </a>
+            </article>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div id="thumbnails" class="thumbnails">
+            {% for image in site.static_files %}
+            {% if image.path contains 'home/fulls' %}
+                <a>
+                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" class="imgage" data-title="{{ image.name }}"/>
+                </a>
+            
             {% endif %}
             {% endfor %}
         </div>
