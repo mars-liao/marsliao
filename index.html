@@ -43,10 +43,12 @@ layout: default
         <div id="main" style="margin-right:10%; margin-left:10%;">
             {% for image in site.static_files %}
             {% if image.path contains 'home/fulls' %}
-            <article class="thumb">
+            <!-- <article class="thumb"> -->
+            <article id="thumbnails" class="thumbnails">
                 <a class='image' href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
-                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt=""
-                        data-name="{{ image.name }}">
+                    <a>
+                        <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="" data-name="{{ image.name }}">
+                    </a>
                 </a>
             </article>
             {% endif %}
