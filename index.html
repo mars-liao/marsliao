@@ -39,17 +39,14 @@ layout: default
         </div>
     </nav>
 
-    <div id="wrapper">
-        <div class="slideshow-container">
-                {% for image in site.static_files %}
-                {% if image.path contains 'home/fulls' %}
-                <div class="mySlides fade">
-                    <img src="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" style="width:100%">
-                    <div class="text">{{ image.name }}</div>
-                </div>
-                {% endif %}
-                {% endfor %}
-        </div>
+    <div class="slideshow-container">
+            {% for image in site.static_files %}
+            {% if image.path contains 'home/fulls' %}
+            <div class="mySlides fade">
+                <img src="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" style="width:100%">
+            </div>
+            {% endif %}
+            {% endfor %}
     </div>
 
         
