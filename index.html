@@ -40,18 +40,30 @@ layout: default
     </nav>
 
     <div id="wrapper">
-        <div class="main-loader"></div>
-
-        <div id="main" style="margin-right:10%; margin-left:10%;">
-            {% for image in site.static_files %}
-            {% if image.path contains 'home/fulls' %}
-            <article class="thumb" >
-                <a class='image' href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
-                    <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="" data-name="{{ image.name }}">
-                </a>
-            </article>
-            {% endif %}
-            {% endfor %}
+        <div class="slideshow-container">
+                {% for image in site.static_files %}
+                {% if image.path contains 'home/fulls' %}
+                <div class="mySlides fade">
+                    <img src="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" style="width:100%">
+                    <div class="text">{{ image.name }}</div>
+                </div>
+                {% endif %}
+                {% endfor %}
         </div>
+    </div>
+
+    <div id="wrapper">
+        <div class="main-loader"></div>
+            <div id="main" style="margin-right:10%; margin-left:10%;">
+                {% for image in site.static_files %}
+                {% if image.path contains 'home/fulls' %}
+                <article class="thumb" >
+                    <a class='image' href="{{ site.baseurl }}/images/home/fulls/{{ image.name }}">
+                        <img src="{{ site.baseurl }}/images/home/thumbs/{{ image.name }}" alt="" data-name="{{ image.name }}">
+                    </a>
+                </article>
+                {% endif %}
+                {% endfor %}
+            </div>
     </div>
 </body>
