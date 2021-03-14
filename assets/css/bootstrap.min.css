@@ -95,6 +95,10 @@
 	right: 0;
 	left: 0
 }
+.ml-auto,
+.mx-auto {
+	margin-left: auto!important
+}
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-brand:focus,
 .navbar-inverse .navbar-brand:hover,
