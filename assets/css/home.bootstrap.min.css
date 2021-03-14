@@ -142,13 +142,6 @@
  .navbar-inverse .navbar-text {
      color: rgba(255, 255, 255, .5)
  }
- .bg-inverse {
-     background-color: #292b2c!important
- }
- a.bg-inverse:focus,
- a.bg-inverse:hover {
-     background-color: #101112!important
- }
  @media (max-width:575px) {
      .navbar-toggleable .navbar-nav .dropdown-menu {
          position: static;
