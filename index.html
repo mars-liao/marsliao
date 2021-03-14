@@ -36,7 +36,7 @@ layout: home
     {% for image in site.static_files %}
     {% if image.path contains 'home/fulls' %}
     <div class="mySlides fade">
-        <img src="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" style="width:100%">
+        <img src="{{ site.baseurl }}/images/home/fulls/{{ image.name }}" style="height:85vh">
     </div>
     {% endif %}
     {% endfor %}
