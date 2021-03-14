@@ -10,7 +10,25 @@
  .navbar {
      -webkit-box-direction: normal
  }
- 
+ body {
+	margin: 0;
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #292b2c;
+	background-color: #fff
+}
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent
+}
  .dropdown-menu,
  .nav,
  .navbar-nav {
