@@ -3,8 +3,32 @@
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */.navbar {
-	-webkit-box-direction: normal
+ */
+.btn-group-vertical,
+.custom-controls-stacked,
+.form-inline,
+.navbar {
+    -webkit-box-direction: normal
+}
+
+.dropdown-menu,
+.nav,
+.navbar-nav {
+	list-style: none
+}
+.badge,
+.btn,
+.dropdown-header,
+.dropdown-item,
+.input-group-btn,
+.navbar-brand {
+	white-space: nowrap
+}
+.btn-group-vertical,
+.custom-controls-stacked,
+.navbar,
+.navbar-nav {
+	-webkit-box-orient: vertical
 }
 @media print {
 	blockquote,
@@ -99,14 +123,6 @@
 .mx-auto {
 	margin-left: auto!important
 }
-.navbar-inverse .navbar-brand,
-.navbar-inverse .navbar-brand:focus,
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-toggler,
-.navbar-inverse .navbar-toggler:focus,
-.navbar-inverse .navbar-toggler:hover {
-	color: #fff
-}
 .navbar-inverse .navbar-nav .nav-link {
 	color: rgba(255, 255, 255, .5)
 }
@@ -122,12 +138,6 @@
 .navbar-inverse .navbar-nav .nav-link.open,
 .navbar-inverse .navbar-nav .open>.nav-link {
 	color: #fff
-}
-.navbar-inverse .navbar-toggler {
-	border-color: rgba(255, 255, 255, .1)
-}
-.navbar-inverse .navbar-toggler-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
 }
 .navbar-inverse .navbar-text {
 	color: rgba(255, 255, 255, .5)
@@ -717,6 +727,125 @@ pre code {
 		margin-left: 0
 	}
 }
+.navbar-brand {
+	display: inline-block;
+	-webkit-align-self: flex-start;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+	line-height: inherit
+}
+.navbar-nav {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding-left: 0;
+	margin-bottom: 0
+}
+.navbar-toggleable-xl,
+.navbar-toggleable-xl .navbar-nav {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal
+}
+
+.navbar-toggleable-xl,
+.navbar-toggleable-xl .navbar-nav {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal
+}
+
+.navbar-nav .nav-link {
+	padding-right: 0;
+	padding-left: 0
+}
+
+.navbar-text {
+	display: inline-block;
+	padding-top: .425rem;
+	padding-bottom: .425rem
+}
+
+.navbar-toggler {
+	-webkit-align-self: flex-start;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	padding: .25rem .75rem;
+	font-size: 1.25rem;
+	line-height: 1;
+	background: 0 0;
+	border: 1px solid transparent;
+	border-radius: .25rem
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:hover {
+	text-decoration: none
+}
+
+.navbar-toggler-icon {
+	display: inline-block;
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: middle;
+	background: center center no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%
+}
+
+.navbar-toggler-left {
+	position: absolute;
+	left: 1rem
+}
+
+.navbar-toggler-right {
+	position: absolute;
+	right: 1rem
+}
+
+.navbar-toggleable-xl {
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.navbar-toggleable-xl .navbar-nav .dropdown-menu {
+	position: static;
+	float: none
+}
+
+.navbar-toggleable-xl .navbar-nav {
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row
+}
+
+.navbar-toggleable-xl .navbar-collapse {
+	display: -webkit-box!important;
+	display: -webkit-flex!important;
+	display: -ms-flexbox!important;
+	display: flex!important;
+	width: 100%
+}
+
+.navbar-toggleable-xl .navbar-toggler {
+	display: none
+}
+
 .text-center {
 	text-align: center!important
 }
@@ -806,22 +935,6 @@ pre code {
 }
 .navbar-inverse .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
-}
-.navbar-inverse .navbar-nav .nav-link {
-	color: rgba(255, 255, 255, .5)
-}
-.navbar-inverse .navbar-nav .nav-link:focus,
-.navbar-inverse .navbar-nav .nav-link:hover {
-	color: rgba(255, 255, 255, .75)
-}
-.navbar-inverse .navbar-nav .nav-link.disabled {
-	color: rgba(255, 255, 255, .25)
-}
-.navbar-inverse .navbar-nav .active>.nav-link,
-.navbar-inverse .navbar-nav .nav-link.active,
-.navbar-inverse .navbar-nav .nav-link.open,
-.navbar-inverse .navbar-nav .open>.nav-link {
-	color: #fff
 }
 .nav-tabs .nav-item {
 	margin-bottom: -1px
